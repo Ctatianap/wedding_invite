@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.banner-opacity {
+    background-color: rgba(8, 8, 7, 0.23); /* Color opalizado negro */
+
+}
+
+.box-bride-and-groom-names p {
+    font-weight: 400;
+    font-style: normal;
+    @apply font-cookie
+}
+/* .box-clock {
+    color: #E3E5D9;
+    @apply bg-cream-default
+} */
+.bg-clock {
+    background: url('../assets/images/heart.png') no-repeat; /* Ajusta la ruta */
+}
+
+.circle-clock {
+    background-color: white;
+    box-shadow: 2px 1px 24px -16px rgba(0,0,0,0.75);
+}
+.clock {
+    display: flex;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-style: normal;
+    @apply text-purple-default
+
+}
+
+.number {
+    color: #a6a6a6;
+    font-weight: 600;
+}
+
+.separator-countdown {
+    margin-top: -300px;
+}
+
+.separator-lines {
+    margin-top: -150px;
+    @apply -mt-[77px] md:-mt-[150px]
+}
+
+.el-carousel__mask {
+    background-color: transparent !important;
+}
+

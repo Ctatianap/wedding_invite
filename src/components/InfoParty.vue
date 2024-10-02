@@ -15,7 +15,7 @@ const onSubmit = () => {
 <template>
   <section class="bg-cream-default pb-20">
     <div class="">
-      <div class="relative separator-lines mb-10">
+      <div class="relative separator-lines mb-20 md:mb-28">
         <img class="w-full mx-auto max-w-[500px]" src="../assets/images/header-party.png" alt="">
         <p class="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-primary-100 text-5xl font-cookie">Ceremonia</p>
       </div>
@@ -24,6 +24,7 @@ const onSubmit = () => {
           <p class="text-purple-default text-4xl font-cookie">Día</p>
           <p class="text-secondary-200 text-lg font-roboto font-light">Sábado 07 de Diciembre</p>
           <p class="text-secondary-200 text-lg font-roboto font-light">16:00 hs</p>
+          <el-button class="my-4" round @click="centerDialogVisible = true">Código de vestimenta</el-button>
         </div>
         <div class="w-full lg:w-1/3 text-center mb-6">
           <p class="text-purple-default text-4xl font-cookie mb-6">Lugar</p>

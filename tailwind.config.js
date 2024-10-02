@@ -29,7 +29,7 @@ export default {
           900: '#1a202c',
         },
         cream: {
-          300:'#eae9e6',
+          300:'#ebebe8',
           default: '#fdfaf7',  //Fondo 
 
         },

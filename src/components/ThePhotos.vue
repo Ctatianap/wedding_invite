@@ -1,28 +1,37 @@
 <script setup>
   import CardPhoto from './CardPhoto.vue'
+  const sizeScreen = screen.width
 </script>
 
 <template>
-  <section class="bg-cream-300">
-    <div class="py-20">
-      <div class="text-center py-20">
-        <h1 class="text-primary-300 text-6xl font-cookie mb-6">Nuestro Viaje Juntos</h1>
-        <p class="text-gray-400 text-lg font-roboto">
-          Acompáñanos a revivir nuestros momentos más especiales.
-        </p>
-        <p class="text-gray-400 text-lg font-roboto">
-          Cada imagen cuenta un capítulo de nuestra historia. <br>
-          ¡Estamos emocionados de compartir este hermoso viaje con ustedes!"
-        </p>
-      </div>
-      <el-carousel :interval="6000" type="card" height="500px" :autoplay="false">
+  <section class="bg-cream-300 -mt-2">
+    <div class="text-center py-20 px-4">
+      <h1 class="text-primary-300 text-6xl font-cookie mb-6">Nuestro Viaje Juntos</h1>
+      <p class="text-gray-400 text-lg font-roboto">
+        Acompáñanos a revivir nuestros momentos más especiales.
+      </p>
+      <p class="text-gray-400 text-lg font-roboto">
+        Cada imagen cuenta un capítulo de nuestra historia. <br>
+        ¡Estamos emocionados de compartir este hermoso viaje con ustedes!"
+      </p>
+    </div>
+    <div class="p-4">
+      <el-carousel 
+        :interval="6000" 
+        :type="sizeScreen > 645 ? 'card' : null" 
+        height="500px" 
+        :autoplay="false" 
+        indicator-position="none"
+        arrow="always">
         <el-carousel-item v-for="(photo, index) in 11" :key="photo">
-    
           <div class="flex justify-center">
             <CardPhoto :url-img="`photo-${index}.jpeg`" />
           </div>
         </el-carousel-item>
       </el-carousel>
+    </div>
+    <div class="bg-cream-300 h-[100px] md:h-[200px] flex items-end -mt-2"> 
+      <img class="" src="../assets/images/separator-lines.png" alt="">
     </div>
   </section>
 </template>

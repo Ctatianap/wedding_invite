@@ -11,10 +11,7 @@
     font-style: normal;
     @apply font-cookie
 }
-/* .box-clock {
-    color: #E3E5D9;
-    @apply bg-cream-default
-} */
+
 .bg-clock {
     background: url('../assets/images/heart.png') no-repeat; /* Ajusta la ruta */
 }
@@ -42,11 +39,15 @@
 }
 
 .separator-lines {
-    margin-top: -150px;
-    @apply -mt-[77px] md:-mt-[150px]
+    @apply -mt-[117px] md:-mt-[150px]
 }
 
 .el-carousel__mask {
     background-color: transparent !important;
+}
+
+.separator-footer {
+    margin-top: -150px;
+    @apply -mt-[77px] md:-mt-[85px]
 }
 

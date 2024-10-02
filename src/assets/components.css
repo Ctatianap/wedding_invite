@@ -2,8 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 .banner-opacity {
+    height: 100%;
     background-color: rgba(8, 8, 7, 0.23); /* Color opalizado negro */
 
+}
+.box-bride-and-groom-names {
+    @apply -mt-[77px] md:-mt-[180px]
 }
 
 .box-bride-and-groom-names p {

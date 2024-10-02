@@ -9,13 +9,18 @@ defineProps({
 
 <template>
   <section>
-    <div class="banner-opacity p-4 md:p-10 lg:p-20">
-      <div>
-      flores
+    <div class="banner-opacity">
+      <div class="flowers">
+        <img class="" src="../assets/images/animation/top/anim-top-left-1.png" alt="leaf 1">
+        <img class="" src="../assets/images/animation/top/anim-top-left-2.png" alt="leaf 2">
+        <img class="" src="../assets/images/animation/top/anim-top-left-3.png" alt="leaf 3">
+        <img class="" src="../assets/images/animation/top/anim-top-left-4.png" alt="leaf 4">
+        <img class="" src="../assets/images/animation/top/anim-top-left-5.png" alt="leaf 5">
+        <img class="" src="../assets/images/animation/top/anim-top-left-6.png" alt="leaf 6">
       </div>
 
-      <div class="container mx-auto">
-        <div class="my-20 flex flex-col justify-center items-center">
+      <div class="container mx-auto p-4 md:px-10 lg:px-20">
+        <div class="mb-20 flex flex-col justify-center items-center">
           <div class="box-bride-and-groom-names w-11/12 md:w-3/4 text-center lg:p-10">
             <div class="flex justify-center items-center">
               <span class="border-b-2 border-color-white w-full lg:w-1/3 mr-5"></span>
@@ -55,3 +60,60 @@ defineProps({
     </div>
   </section>
 </template>
+<style scoped>
+  .flowers {
+    position: relative;
+    height: 400px;
+    max-width: 678px;
+    max-height: 570;
+    @apply w-[200px] h-[168px] md:w-[400px] md:h-[336px]  2xl:w-[600px] 2xl:h-[504px] 
+  }
+  .flowers img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: slideDown 2s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  .flowers img:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .flowers img:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  .flowers img:nth-child(3) {
+    animation-delay: 1s;
+  }
+
+  .flowers img:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+
+  .flowers img:nth-child(5) {
+    animation-delay: 2s;
+  }
+
+  .flowers img:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+
+  @keyframes slideDown {
+    0% {
+      top: -100%;
+      opacity: 0;
+    }
+    50% {
+      top: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
+</style>

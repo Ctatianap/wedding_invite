@@ -9,14 +9,14 @@ export default {
       colors: {
         primary: {
           100: '#82a1a3',  // verdes
-          200: '#98c4aa',  // 
-          300: '#42635f',  // 
+          200: '#98c4aa',  
+          300: '#42635f',  
           default: '#1f3a35', 
         },
         secondary: {
           100: '#b3c7e7',  // Azules
-          200: '#6883ba',  // verde más intenso
-          300: '#2d2f6b',  // verde pastel brillante
+          200: '#6883ba',  
+          300: '#2d2f6b',  
         },
         tertiary: {
           100: '#eed68e',  // Dorado claro

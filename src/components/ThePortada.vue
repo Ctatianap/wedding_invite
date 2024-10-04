@@ -1,16 +1,33 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+  defineProps({
+    msg: {
+      type: String,
+      required: true
+    }
+  })
+ /*  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('#mainPage')
+    if (section) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const images = document.querySelectorAll('.flowers img');
+            images.forEach((img, index) => {
+              img.style.animation = `slideDown 2s ease-in-out forwards ${index * 2}s`
+            });
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(section)
+    } 
+  })*/
 </script>
 
 <template>
-  <section>
+  <section id="mainPage">
     <div class="banner-opacity">
-      <div class="flowers">
+      <div class="flowers f-top">
         <img class="" src="../assets/images/animation/top/anim-top-left-1.png" alt="leaf 1">
         <img class="" src="../assets/images/animation/top/anim-top-left-2.png" alt="leaf 2">
         <img class="" src="../assets/images/animation/top/anim-top-left-3.png" alt="leaf 3">
@@ -23,15 +40,15 @@ defineProps({
         <div class="mb-20 flex flex-col justify-center items-center">
           <div class="box-bride-and-groom-names w-11/12 md:w-3/4 text-center lg:p-10">
             <div class="flex justify-center items-center">
-              <span class="border-b-2 border-color-white w-full lg:w-1/3 mr-5"></span>
+              <span class="border-gradient w-full lg:w-1/3 mr-5"></span>
               <span class="font-semibold w-full lg:w-1/3">07 . 12 . 2024</span>
-              <span class="border-b-2 border-color-white w-full lg:w-1/3 ml-5"></span>
+              <span class="border-gradient w-full lg:w-1/3 ml-5"></span>
             </div>
-            <div class="flex flex-col md:flex-row justify-center py-5 md:py-10 lg:py-20 border-b-2 border-color-white">
+            <div class="flex flex-col md:flex-row justify-center py-5 md:py-10 lg:py-20 border-gradient">
               <p class="w-full md:w-1/3 text-6xl md:text-8xl lg:text-9xl">
                 Stepha
               </p>
-              <div class="mt-4 md:mt-12 mx-auto flex justify-center items-center text-lime-950 rounded-full w-8 h-8 md:w-10 lg:w-14 md:h-10 lg:h-14 bg-lime-50 mx-8"> 
+              <div class="mt-4 md:mt-12 mx-auto flex justify-center items-center text-primary-300 rounded-full w-8 h-8 md:w-10 lg:w-14 md:h-10 lg:h-14 bg-union mx-8"> 
                 <p class="w-full md:w-1/3 text-xl md:text-3xl lg:text-4xl font-extrabold">&</p>  
               </div>  
               <p class="w-full md:w-1/3 text-6xl md:text-8xl lg:text-9xl">
@@ -57,18 +74,32 @@ defineProps({
         </div>
 
       </div>
+      <div class="flowers f-rigth">
+        <img class="" src="../assets/images/animation/right/anim-bottom-right-1.png" alt="leaf-right 1">
+        <img class="" src="../assets/images/animation/right/anim-bottom-right-2.png" alt="leaf-right 2">
+        <img class="" src="../assets/images/animation/right/anim-bottom-right-3.png" alt="leaf-right 3">
+        <img class="" src="../assets/images/animation/right/anim-bottom-right-4.png" alt="leaf-right 4">
+        <img class="" src="../assets/images/animation/right/anim-bottom-right-5.png" alt="leaf-right 5">
+        <img class="" src="../assets/images/animation/right/anim-bottom-right-6.png" alt="leaf-right 6">
+      </div>
+      
     </div>
   </section>
 </template>
 <style scoped>
-  .flowers {
+  #mainPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .f-top {
     position: relative;
     height: 400px;
     max-width: 678px;
     max-height: 570;
     @apply w-[200px] h-[168px] md:w-[400px] md:h-[336px]  2xl:w-[600px] 2xl:h-[504px] 
   }
-  .flowers img {
+  .f-top img {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,6 +107,22 @@ defineProps({
     height: 100%;
     animation: slideDown 2s ease-in-out forwards;
     opacity: 0;
+  }
+
+  .f-rigth {
+    position: relative;
+    width: 100%;
+  }
+
+  .f-rigth img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: slideInFromRight 2s ease-in-out forwards;
+    opacity: 0;
+    max-width: 678px;
+    max-height: 705;
+    @apply w-[200px] h-[208px] md:w-[400px] md:h-[416px]  2xl:w-[600px] 2xl:h-[624px] 
   }
 
   .flowers img:nth-child(1) {
@@ -116,4 +163,17 @@ defineProps({
       opacity: 1;
     }
   }
+
+  @keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+
+  
 </style>

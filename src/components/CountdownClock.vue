@@ -39,8 +39,8 @@ onUnmounted(() => {
 <template>
   <section>
     <div class="banner-opacity mx-auto relative">
-      <div class="relative w-[380px] md:w-full h-[150px] max-w-[500px] md:h-[500px] mx-auto">
-          <img class="" src="../assets/images/heart.png" alt="">
+      <div class="relative w-full h-[150px] max-w-[380px] md:max-w-[500px] md:h-[500px] mx-auto">
+          <img class="w-full mx-auto" src="../assets/images/heart.png" alt="">
       </div>  
       <div class="absolute top-20 md:mt-8 left-1/2 transform -translate-x-1/2 circle-clock rounded-full text-center w-[180px] h-[180px] md:w-[215px] md:h-[215px] flex flex-col items-center justify-center p-3">
         <span class="text-5xl mb-4 text-primary-100 font-cookie">Falta</span>

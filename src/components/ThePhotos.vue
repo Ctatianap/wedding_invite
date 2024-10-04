@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="bg-cream-300 -mt-2">
+  <section class="bg-cream-300 -mt-2 -mb-20">
     <div class="text-center py-20 px-4">
       <h1 class="text-primary-300 text-6xl font-cookie mb-6">Nuestro Viaje Juntos</h1>
       <p class="text-gray-400 text-lg font-roboto">
@@ -30,7 +30,7 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <div class="bg-cream-300 h-[100px] md:h-[200px] flex items-end -mt-2"> 
+    <div class="h-[120px] md:h-[200px] flex items-start -mt-2"> 
       <img class="" src="../assets/images/separator-lines.png" alt="">
     </div>
   </section>

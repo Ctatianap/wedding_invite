@@ -41,25 +41,30 @@ const onSubmit = () => {
     </div>
   </section>
 
-  <el-dialog v-model="centerDialogVisible" title="" width="500" center>
-    <p class="text-center mb-8">
-      ¿Hola {name}!, Deseas confirmar asistencia?
+  <el-dialog v-model="centerDialogVisible" title="" center>
+    <p class="text-center mb-6">
+      ¡{name}! <br>  Deseas confirmar asistencia?
     </p>
     <el-form :model="form" label-width="auto" style="max-width: 600px">
-      <el-form-item>
-        <el-radio-group v-model="form.assist">
-          <el-radio value="Sponsor">Si! Confirmo </el-radio>
-          <el-radio value="Venue">No puedo :(  </el-radio>
-        </el-radio-group>
-      </el-form-item>
-      <el-form-item>
-        <p>Ingrese algún dato importante, Ej: Soy vegetariano</p>
-        <el-input v-model="form.comment" type="textarea" />
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="onSubmit">Enviar</el-button>
-        <el-button>Cancelar</el-button>
-      </el-form-item>
+      <div class="flex justify-center">
+        <el-form-item>
+          <el-radio-group v-model="form.assist">
+            <el-radio value="Sponsor">Si! Confirmo </el-radio>
+            <el-radio value="Venue">No puedo :(  </el-radio>
+          </el-radio-group>
+        </el-form-item>
+      </div>
+      <div class="md:w-1/2 flex flex-col justify-center items-center mx-auto">
+        <p class="text-center mb-4">¿Algún dato importante?<br>  Ej: Soy vegetariano</p>
+        <el-form-item>
+          <el-input v-model="form.comment" type="textarea" />
+        </el-form-item>
+      </div>
+      <div class="flex justify-center">
+        <el-form-item>
+          <el-button type="primary" @click="onSubmit">Enviar</el-button>
+        </el-form-item>
+      </div>
     </el-form>
   </el-dialog>
 </template>

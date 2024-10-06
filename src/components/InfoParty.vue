@@ -89,7 +89,7 @@ const goToUrl = () => {
       <p> vestido vaporoso largo</p>
       <span class="font-cookie text-2xl text-primary-100">Hombre:</span>
       <p class="mb-4">guayabera blanca manga larga</p>
-      <a href="" class="text-xs text-primary-300 mb-4">Mira aquí algunas referencias</a><br>
+      <a href="https://pin.it/1VQWFPTqV" target="_blank" class="text-xs text-primary-300 mb-4">Mira aquí algunas referencias</a><br>
       <div class="text-xs text-purple-default mt-8">Recuerda que el blanco está <br> reservado para la novia</div>
     </div>
   </el-dialog>

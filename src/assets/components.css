@@ -120,3 +120,11 @@
     color: #b29db2 !important;
 }
 
+.el-loading-mask {
+    background-color: #ffffff00 !important;
+}
+
+.el-loading-spinner .path {
+    stroke-width: 5px !important;
+    stroke: #e3d988 !important
+}
